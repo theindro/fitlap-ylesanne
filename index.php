@@ -11,11 +11,10 @@ require 'conn.php';
 ?>
 
 
-
 <div id="main">
     <h1>Overwatch API</h1>
     <div class="form-group">
-        <input class="form-control tag-input" placeholder="deathwish-22634" name="battletag" value="">
+        <input class="form-control tag-input" placeholder="battletag" name="battletag" value="">
         <input class="btn btn-send" type="submit" value="Search" style="margin-top: -4px;">
     </div>
 </div>
@@ -23,7 +22,14 @@ require 'conn.php';
 <div class="container" style="margin-top:20px;">
     <h2>How to use?</h2>
     <p>Enter your <a href="https://www.blizzard.com/en-us/">Battle.net</a> Overwatch battletag into input above and
-        press "Search".</p>
+        press "Search".
+        <br>
+        Example <b>battletags</b> to use:
+    <ul>
+        <li>ThaPhoenix-1394</li>
+        <li>deathwish-22634</li>
+        <li>Zinc-2266</li>
+    </ul>
     <h4>List of added battletags:</h4>
     <ul class="list-group">
         <?php
@@ -32,8 +38,8 @@ require 'conn.php';
 
         if ($result->num_rows > 0) {
             // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo '<li class="list-group-item"><a href="profile.php?battletag='.$row["battle_tag"].'">' . $row["battle_tag"]. '</a></li>';
+            while ($row = $result->fetch_assoc()) {
+                echo '<li class="list-group-item"><a href="profile.php?battletag=' . $row["battle_tag"] . '">' . $row["battle_tag"] . '</a></li>';
             }
         } else {
             echo "0 results";
