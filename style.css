@@ -1,0 +1,74 @@
+#main h1 {
+    text-align:center;
+    padding-top:50px;
+    color:white;
+    text-shadow: 1px 5px #000000;
+}
+
+.tag-input {
+    width:300px;
+    display:inline-block;
+}
+
+#main {
+    width:100%;
+    height:500px;
+    background-image: url(images/banner.jpg);
+}
+
+#main .form-group {
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    padding-top:160px;
+}
+
+.profile-main {
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    padding-top:160px;
+}
+
+.profile-main h2 {
+    color:white;
+}
+
+.btn-send {
+    background-color:orange;
+    color:white;
+}
+
+.btn-send:hover {
+    background-color: #ffc400;
+}
+
+.btag {
+    text-transform: uppercase;
+    font-size:50px;
+    color:white;
+    padding-top:10px;
+}
+
+.rank {
+    color:white;
+    margin-top:-30px;
+}
+
+.head {
+    margin-top:100px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .btag {
+        text-align:center ;
+    }
+    .rank {
+        text-align:center;
+    }
+    .avatar {
+        display: block;
+        margin: 0 auto;
+    }
+}
